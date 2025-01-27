@@ -25,7 +25,7 @@ client.on('presenceUpdate', (oldPresence, newPresence) => {
 
     console.log(`${user.username}'s activities:`, newPresence.activities.map(activity => `${activity.type}: ${activity.name}`));
 
-    const game = newPresence.activities.find(activity => activity.name === 'League of Legends'); ///activity.type === 0 ||
+    const game = newPresence.activities.find(activity => activity.name === 'League of Legends');
 
     if (game) {
         console.log(`${user.username} is currently playing: ${game.name}`);
